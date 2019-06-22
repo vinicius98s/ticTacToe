@@ -1,16 +1,17 @@
 import React from "react";
 import styled from "styled-components";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import colors from "../../utils/colors";
 
 const Score = ({ firstPlayerScore, secondPlayerScore }) => (
   <ScoreWrapper>
     <ScoreInfoWrapper>
-      <ScoreText>X</ScoreText>
+      <Icon name="close" size={30} color={colors.primaryDarker} />
       <ScoreText>{firstPlayerScore || "-"}</ScoreText>
     </ScoreInfoWrapper>
     <ScoreInfoWrapper>
-      <ScoreText>O</ScoreText>
+      <Icon name="circle-outline" size={26} color={colors.primaryDarker} />
       <ScoreText>{secondPlayerScore || "-"}</ScoreText>
     </ScoreInfoWrapper>
   </ScoreWrapper>
@@ -38,6 +39,7 @@ const ScoreInfoWrapper = styled.View`
   padding: 5px 10px;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 `;
 
 export default Score;
